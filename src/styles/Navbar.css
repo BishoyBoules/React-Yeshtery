@@ -1,0 +1,71 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: #fff100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navbar section {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navbar a {
+    font-weight: bold;
+}
+.navbar .lines {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.navbar .lines .line {
+    background-color: #000;
+    width: 25px;
+    height: 3px;
+    margin: 2px;
+}
+.navbar .lines .midLine {
+    background-color: #000;
+    width: 22px;
+    height: 3px;
+    margin: 2px;
+}
+.navbar .img {
+    margin-right: 100px;
+}
+.navbar .img img {
+    width: 100px;
+    height: auto;
+}
+.navbar .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navbar .links .first {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .links .first p {
+    margin-left: 10px;
+}
+.navbar .links .first a {
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navbar .links .second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .links .second a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,63 @@
+$--primary-color: #542e90;
+$--secondary-color: #fff100;
+
+@mixin margins() {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@mixin flex($flexDirection, $justify) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: center;
+  justify-content: $justify;
+}
+
+.cart {
+  opacity: 1;
+  width: 450px;
+  height: 100%;
+  background-color: white;
+  margin-top: -20px;
+  right: 0;
+  top: 15px;
+  position: fixed;
+  padding: 30px 20px;
+  box-shadow: 5px 5px 10px black;
+
+  span {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  h1 {
+    color: $--primary-color;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .buttons {
+    @include flex(row, space-between);
+    button {
+      width: 250px;
+      height: 30px;
+      font-size: 12px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+    }
+    :first-child {
+      margin-right: 5px;
+      background-color: $--secondary-color;
+      color: black;
+    }
+    :last-child {
+      background-color: $--primary-color;
+      color: white;
+    }
+  }
+}

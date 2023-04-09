@@ -1,0 +1,50 @@
+$--primary-color: #542e90;
+$--secondary-color: #fff100;
+$--third-color: lightgrey;
+@mixin margins($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+@mixin flex($flexDirection, $justify) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: center;
+  justify-content: $justify;
+}
+
+.similarProducts {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-right: 150px;
+  padding-left: 150px;
+
+  h1 {
+    color: $--primary-color;
+    margin-bottom: -10px;
+  }
+  p {
+    font-size: 27px;
+  }
+
+  .lines {
+    display: grid;
+    grid-template-columns: 750px 400px;
+    align-items: center;
+    :first-child {
+      width: 750px;
+      height: 4px;
+      background-color: $--primary-color;
+      border: none;
+    }
+    :last-child {
+      width: 400px;
+      height: 2px;
+      background-color: $--third-color;
+      border: none;
+    }
+  }
+
+  .products{
+    @include flex(row,space-between )
+  }
+}

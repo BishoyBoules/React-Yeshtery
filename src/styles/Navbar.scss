@@ -1,0 +1,79 @@
+$--primary-color: #542e90;
+$--secondary-color: #fff100;
+
+@mixin margins() {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@mixin flex($flexDirection, $justify) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: center;
+  justify-content: $justify;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: $--secondary-color;
+  @include flex(row, center);
+
+  section {
+    @include margins();
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  .lines {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    .line {
+      background-color: #000;
+      width: 25px;
+      height: 3px;
+      margin: 2px;
+    }
+    .midLine {
+      background-color: #000;
+      width: 22px;
+      height: 3px;
+      margin: 2px;
+    }
+  }
+
+  .img {
+    margin-right: 100px;
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  .links {
+    @include flex(row, space-evenly);
+
+    .first {
+      @include flex(row, space-between);
+
+      p {
+        margin-left: 10px;
+      }
+      a {
+        color: #000;
+        @include margins();
+      }
+    }
+    .second {
+      @include flex(row, space-between);
+      a {
+        margin-left: 5px;
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+}

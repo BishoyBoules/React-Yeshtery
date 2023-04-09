@@ -1,0 +1,135 @@
+$--primary-color: #542e90;
+$--secondary-color: #fff100;
+$--third-color: lightgrey;
+@mixin margins($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+@mixin flex($flexDirection, $justify, $align) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.footer {
+  background-color: rgb(65, 62, 62);
+  @include flex(column, space-between, center);
+  padding: 40px 150px;
+  color: white;
+
+  .details {
+    @include flex(row, space-between, center);
+    .textSection {
+      width: 40%;
+      .img {
+        margin-bottom: 20px;
+        img {
+          width: 200px;
+          height: auto;
+        }
+      }
+    }
+    .firstVertical {
+      background-color: rgb(84, 82, 82);
+      width: 1px;
+      height: 350px;
+    }
+
+    .subscribeSection {
+      width: 50%;
+      @include flex(column, space-between, flex-start);
+      .subscribe {
+        width: 100%;
+        margin-bottom: 60px;
+        .subscribeInput {
+          @include flex(row, space-between, center);
+          input {
+            ::placeholder {
+              color: $--primary-color;
+            }
+            color: $--primary-color;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            outline: none;
+            width: 90%;
+            height: 50px;
+            border-radius: 35px;
+            padding: 10px;
+          }
+          button {
+            position: absolute;
+            cursor: pointer;
+            margin-left: 400px;
+            height: 50px;
+            width: 120px;
+            border-radius: 25px;
+            border: none;
+            color: black;
+            font-weight: bold;
+            background-color: $--secondary-color;
+            text-align: center;
+            @include flex(row, space-evenly, center);
+          }
+        }
+      }
+      .links {
+        @include flex(row, space-between, flex-start);
+        margin-top: -30px;
+        .leftLinks {
+          @include flex(column, space-between, flex-start);
+          margin-right: 100px;
+
+          a {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: white;
+            text-decoration: none;
+          }
+        }
+        .secondVertical {
+          background-color: rgb(84, 82, 82);
+          width: 1px;
+          height: 190px;
+          margin-right: 50px;
+        }
+        .rightLinks {
+          @include flex(column, space-between, flex-start);
+          div {
+            @include flex(row, space-between, center);
+            margin-bottom: 10px;
+            .linkImg {
+              width: 30px;
+              height: auto;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(84, 82, 82);
+    border: none;
+  }
+  .rightsSection {
+    width: 100%;
+    margin-top: 20px;
+    @include flex(row, space-between, center);
+    .paying {
+      @include flex(row, center, center);
+      img{
+        margin-right: 10px;
+      }
+    }
+    .nasnav {
+      @include flex(row, center, center);
+      img {
+        margin-left: 5px;
+      }
+    }
+  }
+}

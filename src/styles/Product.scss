@@ -1,0 +1,270 @@
+$--primary-color: #542e90;
+$--secondary-color: #fff100;
+$--third-color: lightgrey;
+@mixin margins($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+@mixin flex($flexDirection, $justify) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: center;
+  justify-content: $justify;
+}
+
+.category {
+  margin-left: 140px;
+  @include flex(row, flex-start);
+  :last-child {
+    text-decoration: none;
+  }
+  a {
+    color: black;
+    @include margins(5px, 5px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+}
+.product {
+  @include flex(row, space-evenly);
+  .images {
+    @include flex(column, center);
+    margin-top: -100px;
+    .mainImage {
+      position: relative;
+      text-align: center;
+      img {
+        width: 600px;
+        border-radius: 10px;
+        height: auto;
+        @include flex(column, center);
+      }
+      i {
+        background-color: white;
+        cursor: pointer;
+        border: none;
+        position: absolute;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        left: 20px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .moreImages {
+      margin-top: 30px;
+      @include flex(row, center);
+      img {
+        width: 160px;
+        height: auto;
+        @include margins(10px, 10px);
+      }
+    }
+  }
+
+  .details {
+    @include flex(column, space-between);
+    margin-top: 50px;
+    hr {
+      width: 100%;
+      height: 2px;
+      background-color: $--third-color;
+      border: none;
+    }
+    .price {
+      margin-bottom: 5px;
+      img {
+        width: 50px;
+        height: auto;
+      }
+      .description {
+        font-size: 20px;
+        font-weight: 700;
+        width: 400px;
+      }
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: $--third-color;
+      }
+      .rating {
+        font-size: 20px;
+        font-weight: 700;
+        @include margins(10px, 10px);
+      }
+      .numberOfRates {
+        font-size: 20px;
+        color: gray;
+        text-align: center;
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: $--primary-color;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .le {
+        font-size: 20px;
+        color: $--primary-color;
+        margin-right: 20px;
+      }
+      .oldPrice {
+        color: grey;
+        margin-right: 20px;
+      }
+      .line {
+        background-color: grey;
+        width: 55px;
+        height: 1px;
+        position: absolute;
+        margin-top: 73px;
+      }
+      .sale {
+        display: inline-block;
+        background-color: $--secondary-color;
+        width: 70px;
+        height: 20px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+    .size {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: -30px;
+      margin-bottom: 10px;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .sizeCategories {
+        @include flex(row, space-between);
+
+        span {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 0px solid $--third-color;
+          color: $--primary-color;
+          text-align: center;
+          font-size: 12px;
+          @include flex(row, center);
+          @include margins(0, 10px);
+        }
+        .activeSize {
+          background-color: $--third-color;
+        }
+      }
+    }
+    .color {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: -200px;
+      margin-bottom: 10px;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .colorCategories {
+        @include flex(row, space-between);
+
+        .activeColor {
+          border: 1px solid $--primary-color;
+        }
+
+        span {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          color: $--primary-color;
+          text-align: center;
+          font-size: 12px;
+          @include flex(row, center);
+          @include margins(0, 10px);
+
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .quantity {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 10px;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .number {
+        @include flex(row, space-between);
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        background-color: $--third-color;
+        padding-right: 5px;
+        padding-left: 5px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+
+        button {
+          border-radius: 50%;
+          border: none;
+          background-color: $--secondary-color;
+          cursor: pointer;
+          font-size: 15px;
+        }
+      }
+
+      .cartButtons {
+        width: 400px;
+        @include flex(row, space-between);
+        button {
+          width: 200px;
+          height: 40px;
+          font-size: 13px;
+          font-weight: 800;
+          text-align: center;
+          border-radius: 25px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .add {
+          background-color: $--primary-color;
+          color: white;
+          margin-right: 10px;
+        }
+        .pickup {
+          background-color: $--secondary-color;
+          color: black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.cart {
+    opacity: 1;
+    width: 450px;
+    height: 100%;
+    background-color: white;
+    margin-top: -20px;
+    right: 0;
+    top: 15px;
+    position: fixed;
+    padding: 30px 20px;
+    box-shadow: 5px 5px 10px black;
+}
+.cart span {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.cart h1 {
+    color: #542e90;
+    text-align: center;
+}
+.cart h2 {
+    text-align: center;
+}
+.cart .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart .buttons button {
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+.cart .buttons :first-child {
+    margin-right: 5px;
+    background-color: #fff100;
+    color: black;
+}
+.cart .buttons :last-child {
+    background-color: #542e90;
+    color: white;
+}

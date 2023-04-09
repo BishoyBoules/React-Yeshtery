@@ -1,0 +1,36 @@
+.similarProducts {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+.similarProducts h1 {
+    color: #542e90;
+    margin-bottom: -10px;
+}
+.similarProducts p {
+    font-size: 27px;
+}
+.similarProducts .lines {
+    display: grid;
+    grid-template-columns: 750px 400px;
+    align-items: center;
+}
+.similarProducts .lines :first-child {
+    width: 750px;
+    height: 4px;
+    background-color: #542e90;
+    border: none;
+}
+.similarProducts .lines :last-child {
+    width: 400px;
+    height: 2px;
+    background-color: lightgrey;
+    border: none;
+}
+.similarProducts .products {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

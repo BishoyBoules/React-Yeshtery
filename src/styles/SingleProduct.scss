@@ -1,0 +1,150 @@
+$--primary-color: #542e90;
+$--secondary-color: #fff100;
+$--third-color: lightgrey;
+@mixin margins($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+@mixin flex($flexDirection, $justify, $align) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.singleProduct {
+  margin-bottom: 20px;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;
+  height: 400px;
+  text-align: start;
+  border-radius: 5px;
+  @include flex(column, space-evenly, center);
+
+  .mainImage {
+    img {
+      width: 240px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    i img {
+      position: absolute;
+      width: 40px;
+      height: auto;
+      margin-top: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .description {
+    @include flex(column, space-between, center);
+    .text {
+      padding-left: 15px;
+      padding-right: 30px;
+      p {
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+    .details {
+      width: 100%;
+      padding-left: 15px;
+      @include flex(row, space-between, normal);
+      .price {
+        padding-left: 7px;
+        @include flex(column, space-between, flex-start);
+        .priceFirst {
+          @include flex(row, flex-start, normal);
+          margin-top: -40px;
+          h1 {
+            font-size: 20px;
+            font-weight: bold;
+            padding-right: 30px;
+          }
+          span {
+            font-size: 12px;
+            margin-top: 55px;
+            padding-left: 60px;
+            position: absolute;
+          }
+        }
+        .saleElement {
+          text-align: center;
+          margin-bottom: -12px;
+          .oldPrice {
+            color: grey;
+            margin-right: 20px;
+          }
+          .line {
+            background-color: grey;
+            width: 75px;
+            height: 1px;
+            position: absolute;
+            margin-top: 10px;
+          }
+          .sale {
+            display: inline-block;
+            background-color: $--secondary-color;
+            width: 70px;
+            height: 20px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 5px;
+          }
+        }
+      }
+      .brandImg {
+        padding-right: 20px;
+        img {
+          width: 50px;
+          height: auto;
+        }
+      }
+    }
+    .rating {
+      position: relative;
+      @include flex(row, center, center);
+      margin-top: 10px;
+      .stars {
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+      .number {
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+    .pickup {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      width: 100%;
+      .from {
+        text-align: center;
+        @include flex(row, center, center);
+        div {
+          font-size: 10px;
+          span {
+            margin-left: 5px;
+            font-weight: bold;
+          }
+        }
+      }
+      .fromTo {
+        @include flex(row, space-between, center);
+        padding-left: 15px;
+        padding-right: 55px;
+        div {
+          font-size: 10px;
+          span {
+            margin-left: 5px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

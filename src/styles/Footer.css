@@ -1,0 +1,154 @@
+.footer {
+    background-color: #413e3e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 150px;
+    color: white;
+}
+.footer .details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .details .textSection {
+    width: 40%;
+}
+.footer .details .textSection .img {
+    margin-bottom: 20px;
+}
+.footer .details .textSection .img img {
+    width: 200px;
+    height: auto;
+}
+.footer .details .firstVertical {
+    background-color: #545252;
+    width: 1px;
+    height: 350px;
+}
+.footer .details .subscribeSection {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer .details .subscribeSection .subscribe {
+    width: 100%;
+    margin-bottom: 60px;
+}
+.footer .details .subscribeSection .subscribe .subscribeInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .details .subscribeSection .subscribe .subscribeInput input {
+    color: #542e90;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    width: 90%;
+    height: 50px;
+    border-radius: 35px;
+    padding: 10px;
+}
+.footer .details .subscribeSection .subscribe .subscribeInput input ::placeholder {
+    color: #542e90;
+}
+.footer .details .subscribeSection .subscribe .subscribeInput button {
+    position: absolute;
+    cursor: pointer;
+    margin-left: 400px;
+    height: 50px;
+    width: 120px;
+    border-radius: 25px;
+    border: none;
+    color: black;
+    font-weight: bold;
+    background-color: #fff100;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer .details .subscribeSection .links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: -30px;
+}
+.footer .details .subscribeSection .links .leftLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+.footer .details .subscribeSection .links .leftLinks a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: none;
+}
+.footer .details .subscribeSection .links .secondVertical {
+    background-color: #545252;
+    width: 1px;
+    height: 190px;
+    margin-right: 50px;
+}
+.footer .details .subscribeSection .links .rightLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer .details .subscribeSection .links .rightLinks div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.footer .details .subscribeSection .links .rightLinks div .linkImg {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+.footer hr {
+    width: 100%;
+    height: 1px;
+    background-color: #545252;
+    border: none;
+}
+.footer .rightsSection {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .rightsSection .paying {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer .rightsSection .paying img {
+    margin-right: 10px;
+}
+.footer .rightsSection .nasnav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer .rightsSection .nasnav img {
+    margin-left: 5px;
+}

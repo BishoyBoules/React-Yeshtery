@@ -1,0 +1,55 @@
+.cartItem .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 8px;
+}
+.cartItem .item .itemImg {
+    text-align: center;
+    margin-right: 10px;
+}
+.cartItem .item .itemImg img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+.cartItem .item .itemDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.cartItem .item .itemDetails div {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cartItem .item .itemDetails div span {
+    font-size: 10px;
+    color: #542e90;
+    margin-right: 225px;
+    margin-top: -35px;
+    position: absolute;
+}
+.cartItem .item .itemDetails div button {
+    background-color: #fff100;
+    border-radius: 12px;
+    border: none;
+    color: #3c3c3b;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 18px;
+    cursor: pointer;
+}
+.cartItem .item .itemDetails .description {
+    font-size: 10px;
+    font-weight: bold;
+}
+.cartItem .item .itemDetails .quantity {
+    font-size: 10px;
+}

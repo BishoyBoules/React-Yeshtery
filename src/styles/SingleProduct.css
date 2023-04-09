@@ -1,0 +1,155 @@
+.singleProduct {
+    margin-bottom: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 400px;
+    text-align: start;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.singleProduct .mainImage img {
+    width: 240px;
+    height: auto;
+    border-radius: 5px;
+}
+.singleProduct .mainImage i img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.singleProduct .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.singleProduct .description .text {
+    padding-left: 15px;
+    padding-right: 30px;
+}
+.singleProduct .description .text p {
+    font-size: 13px;
+    font-weight: bold;
+}
+.singleProduct .description .details {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: space-between;
+}
+.singleProduct .description .details .price {
+    padding-left: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.singleProduct .description .details .price .priceFirst {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: flex-start;
+    margin-top: -40px;
+}
+.singleProduct .description .details .price .priceFirst h1 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 30px;
+}
+.singleProduct .description .details .price .priceFirst span {
+    font-size: 12px;
+    margin-top: 55px;
+    padding-left: 60px;
+    position: absolute;
+}
+.singleProduct .description .details .price .saleElement {
+    text-align: center;
+    margin-bottom: -12px;
+}
+.singleProduct .description .details .price .saleElement .oldPrice {
+    color: grey;
+    margin-right: 20px;
+}
+.singleProduct .description .details .price .saleElement .line {
+    background-color: grey;
+    width: 75px;
+    height: 1px;
+    position: absolute;
+    margin-top: 10px;
+}
+.singleProduct .description .details .price .saleElement .sale {
+    display: inline-block;
+    background-color: #fff100;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.singleProduct .description .details .brandImg {
+    padding-right: 20px;
+}
+.singleProduct .description .details .brandImg img {
+    width: 50px;
+    height: auto;
+}
+.singleProduct .description .rating {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.singleProduct .description .rating .stars {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.singleProduct .description .rating .number {
+    font-size: 13px;
+    font-weight: bold;
+}
+.singleProduct .description .pickup {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.singleProduct .description .pickup .from {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.singleProduct .description .pickup .from div {
+    font-size: 10px;
+}
+.singleProduct .description .pickup .from div span {
+    margin-left: 5px;
+    font-weight: bold;
+}
+.singleProduct .description .pickup .fromTo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 55px;
+}
+.singleProduct .description .pickup .fromTo div {
+    font-size: 10px;
+}
+.singleProduct .description .pickup .fromTo div span {
+    margin-left: 5px;
+    font-weight: bold;
+}
